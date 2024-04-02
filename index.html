@@ -7,32 +7,61 @@
       <script src="script.js"></script>
    </head>
    <body>
-      <!-- Current Color Palette: https://coolors.co/palette/ff99c8-fcf6bd-d0f4de-a9def9-e4c1f9 -->
-      <div class="container" id='hideme'>
-         <label for="checkbox-1">
-         <input type="checkbox" name="checkbox" value="rgb(244,38,42)" onchange="changeBackground()">
-         AI / VR / XR
+      <div class="container">
+         <label for="checkbox-1" > <span class="dot1"></span>
+         <input type="checkbox" name="checkbox" value="rgb(230,100,101)" onchange="store()" >
+         Design
+
          </label>
-         <label for="checkbox-2">
-         <input type="checkbox" name="checkbox" value="rgb(125, 190, 87)" onchange="changeBackground()">
-         Equity & Access
+         <label for="checkbox-2"> <span class="dot2"></span>
+         <input type="checkbox" name="checkbox" value="rgb(133, 181, 249)" onchange="store()">
+         Technology
+
          </label>
-         <label for="checkbox-3">
-         <input type="checkbox" name="checkbox" value="rgb(246,202,70)" onchange="changeBackground()">
-         Future Skills
+         <label for="checkbox-3"> <span class="dot3"></span>
+         <input type="checkbox" name="checkbox" value="rgb(254,239,104)" onchange="store()">
+         Management
+
          </label>
-         <label for="checkbox-4">
-         <input type="checkbox" name="checkbox" value="rgb(111,165,248)" onchange="changeBackground()">
-         Global Education
+         <label for="checkbox-4"> <span class="dot4"></span>
+         <input type="checkbox" name="checkbox" value="rgb(244,106,216)" onchange="store()">
+         Policy
+
          </label>
-         <label for="checkbox-5">
-         <input type="checkbox" name="checkbox" value="rgb(236, 15, 222)" onchange="changeBackground()">
-         Online Learning
+         <label for="checkbox-5"> <span class="dot5"></span>
+         <input type="checkbox" name="checkbox" value="rgb(122, 254, 128)" onchange="store()">
+         <input type="text" id="inputText" placeholder = "Custom">
          </label> 
       </div>
-      <div class="button">
-         <button onclick= "showHide()" class="button-85" role="button"\><i class="fa fa-star"></i><span style="padding-left: 10px;"></span>SPARK!</button>
-      </div>
 
+     <!--<div class="sliderscontainer">
+
+         <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="50" step="10" oninput="rangeValue1.innerText = this.value">
+            <p id="rangeValue1">50</p>
+          </div>
+
+         <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="50" step="10" oninput="rangeValue2.innerText = this.value">
+            <p id="rangeValue2">50</p>
+          </div>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="50" step="10" oninput="rangeValue3.innerText = this.value">
+            <p id="rangeValue3">50</p>
+          </div>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="50" step="10" oninput="rangeValue4.innerText = this.value">
+            <p id="rangeValue4">50</p>
+          </div>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="50" step="10" oninput="rangeValue5.innerText = this.value">
+            <p id="rangeValue5">50</p>
+          </div>  --> 
+
+
+      </div>
+      <a href="gradient.html">
+      <button onclick= "showHide()" class="button-85" role="button"\><i class="fa fa-star"></i><span style="padding-left: 10px;"></span>SPARK!</button>
+      </a>
    </body>
 </html>
