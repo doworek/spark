@@ -33,29 +33,44 @@ function changeBackground() {
         gVal = 255;
         bVal = 255;
     }
-    console.log(backgroundString)
+
+    const result = [];
     if (numSelected == 1) {
-      console.log("option 1");
-      document.body.style.background = backgroundString;
+      result[0] = [backgroundString];
+      result[1] = [1]
+      return result;
     } else {
-      console.log("option 2");
-      document.body.style.backgroundImage = "linear-gradient(" + backgroundString + ")";
+      result[0] = [backgroundString];
+      result[1] = [2];
+      return result;
     }
  }
 
- function hideElem() {
-   document.getElementById("hideme").style.visibility = "hidden";
- }
- 
- function showElem() {
-   document.getElementById("hideme").style.visibility = "visible";
- } 
+function store(){
+   
+   var backgroundGradient = changeBackground();
 
- function showHide(){
-   if (document.getElementById("hideme").style.visibility == "hidden"){
-      showElem()
-   }else{
-      document.getElementById("hideme").style.visibility == "visible"
-      hideElem()
-      }
- }
+   sessionStorage.setItem("backgroundGradient", JSON.stringify(backgroundGradient));
+}
+
+function get(){
+
+   var backgroundGradient = sessionStorage.getItem("backgroundGradient");
+   backgroundGradient = JSON.parse(backgroundGradient)
+
+   if (backgroundGradient[1] == 1){
+      document.body.style.background = backgroundGradient[0];
+   }else {
+   document.body.style.background = "linear-gradient(" + backgroundGradient[0] + ")";
+   }
+   sessionStorage.clear()
+}
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+} 
